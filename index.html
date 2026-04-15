@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Viaje a El Salvador 2026</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: linear-gradient(135deg, #0d0d0d 0%, #1a1a2e 100%);
+    font-family: 'Georgia', serif;
+    min-height: 100vh;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .header {
+    text-align: center;
+    margin-bottom: 30px;
+    color: white;
+  }
+  .header h1 {
+    font-size: 2.4rem;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #f9d423, #ff4e50);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .header p {
+    color: #aaa;
+    font-size: 0.9rem;
+    margin-top: 8px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+  .collage-wrapper { width: 100%; max-width: 960px; }
+
+  .section-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    margin-top: 24px;
+  }
+  .section-label span {
+    color: white;
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+  .section-label .line { flex: 1; height: 1px; background: rgba(255,255,255,0.2); }
+  .badge {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: #f9d423;
+    font-size: 0.65rem;
+    padding: 3px 12px;
+    border-radius: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .grid-city {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 220px 170px;
+    gap: 6px;
+    border-radius: 18px;
+    overflow: hidden;
+  }
+  .grid-city .img-main { grid-column: 1; grid-row: 1 / 3; }
+  .grid-city .img-2    { grid-column: 2; grid-row: 1; }
+  .grid-city .img-3    { grid-column: 3; grid-row: 1; }
+  .grid-city .img-4    { grid-column: 2; grid-row: 2; }
+  .grid-city .img-5    { grid-column: 3; grid-row: 2; }
+
+  .grid-beach {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-rows: 185px 205px;
+    gap: 6px;
+    border-radius: 18px;
+    overflow: hidden;
+  }
+  .grid-beach .img-main { grid-column: 3; grid-row: 1 / 3; }
+  .grid-beach .img-2    { grid-column: 1; grid-row: 1; }
+  .grid-beach .img-3    { grid-column: 2; grid-row: 1; }
+  .grid-beach .img-4    { grid-column: 1; grid-row: 2; }
+  .grid-beach .img-5    { grid-column: 2; grid-row: 2; }
+
+  .photo {
+    position: relative;
+    overflow: hidden;
+  }
+  .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    display: block;
+  }
+  .photo:hover img { transform: scale(1.07); }
+  .photo::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent 55%, rgba(0,0,0,0.3) 100%);
+    pointer-events: none;
+  }
+
+  .prop-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 14px;
+    padding: 14px 20px;
+    margin-top: 8px;
+    color: white;
+  }
+  .prop-info .name { font-size: 1rem; font-weight: bold; }
+  .prop-info .sub  { font-size: 0.77rem; color: #aaa; margin-top: 4px; }
+  .prop-info .stars { color: #f9d423; font-size: 0.88rem; }
+  .prop-info .dates { font-size: 0.77rem; color: #ccc; text-align: right; margin-top: 4px; }
+
+  .divider {
+    text-align: center;
+    color: rgba(255,255,255,0.25);
+    font-size: 1.3rem;
+    margin: 22px 0 4px;
+    letter-spacing: 10px;
+  }
+  .footer {
+    text-align: center;
+    color: rgba(255,255,255,0.25);
+    font-size: 0.7rem;
+    margin-top: 28px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>✈ El Salvador 2026</h1>
+  <p>Tres paradas · Un viaje increíble</p>
+</div>
+
+<div class="collage-wrapper">
+
+  <!-- PARADA 1: Los Cóbanos -->
+  <div class="section-label">
+    <span>Parada 1</span>
+    <div class="line"></div>
+    <div class="badge">Los Cóbanos · Playa Salinitas · 24 – 27 abr</div>
+    <div class="line"></div>
+  </div>
+
+  <div class="grid-beach">
+    <div class="photo img-2"><img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTE2NzMzOTc5MjMxNDI5NDYzMQ==/original/16ac1368-e0be-4707-b218-ffd3e3cfe8e7.jpeg?im_w=720" alt=""></div>
+    <div class="photo img-3"><img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTE2NzMzOTc5MjMxNDI5NDYzMQ==/original/c36b25b2-0754-4466-9dda-4474ff086a2b.jpeg?im_w=720" alt=""></div>
+    <div class="photo img-main"><img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTE2NzMzOTc5MjMxNDI5NDYzMQ==/original/6015a1b8-3933-4943-9a24-e5d1c469b1a5.jpeg?im_w=960" alt=""></div>
+    <div class="photo img-4"><img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTE2NzMzOTc5MjMxNDI5NDYzMQ==/original/011868d5-301b-437b-9cdd-df7821cbfbf3.jpeg?im_w=720" alt=""></div>
+    <div class="photo img-5"><img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTE2NzMzOTc5MjMxNDI5NDYzMQ==/original/09b2546f-5b5f-42eb-ad98-bf0df6e5b33b.jpeg?im_w=720" alt=""></div>
+  </div>
+
+  <div class="prop-info">
+    <div>
+      <div class="name">Villa Capri — Casa de playa</div>
+      <div class="sub">5 hab · 9 camas · Piscina privada · Acceso a la playa · 13 huéspedes</div>
+    </div>
+    <div style="text-align:right">
+      <div class="stars">★ 4.74 &nbsp;<span style="color:#888;font-size:0.75rem">(50 reseñas)</span></div>
+      <div class="dates">24 — 27 abr · 3 noches</div>
+    </div>
+  </div>
+
+  <div class="divider">· · · · ·</div>
+
+  <!-- PARADA 2: Nueva casa Airbnb (con tus 5 imágenes reales) -->
+  <div class="section-label">
+    <span>Parada 2</span>
+    <div class="line"></div>
+    <div class="badge">La Libertad · 27 – 30 abr</div>
+    <div class="line"></div>
+  </div>
+
+  <div class="grid-city">
+    <div class="photo img-main">
+      <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1531449905682686189/original/e0c7b3d3-a431-4fb0-9c9b-2c1d1b3abf60.jpeg?im_w=720" alt="Piscina principal">
+    </div>
+    <div class="photo img-2">
+      <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1531449905682686189/original/fff7a2b7-f4c2-4edb-a513-ce652a428918.jpeg?im_w=720" alt="Vista exterior">
+    </div>
+    <div class="photo img-3">
+      <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1531449905682686189/original/2415fb5f-6605-4b46-9a56-d0be5be057a7.jpeg?im_w=720" alt="Área exterior">
+    </div>
+    <div class="photo img-4">
+      <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1531449905682686189/original/22f0b2d7-a24d-45d7-ac9b-ec400efd82f8.jpeg?im_w=720" alt="Habitación">
+    </div>
+    <div class="photo img-5">
+      <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1531449905682686189/original/78f4d237-6ad6-4764-95ce-869a20e4bc51.jpeg?im_w=720" alt="Sala y vista">
+    </div>
+  </div>
+
+  <div class="prop-info">
+    <div>
+      <div class="name">Casa con piscina y vista al mar • La Libertad</div>
+      <div class="sub">4 habitaciones · 7 camas · 3 baños · Piscina privada · Terraza · Ideal para grupos</div>
+    </div>
+    <div style="text-align:right">
+      <div class="stars">★ 4.89 &nbsp;<span style="color:#888;font-size:0.75rem">(reseñas recientes)</span></div>
+      <div class="dates">27 — 30 abr · 3 noches</div>
+    </div>
+  </div>
+
+  <div class="divider">· · · · ·</div>
+
+  <!-- PARADA 3: Ciudad Dorada -->
+  <div class="section-label">
+    <span>Parada 3</span>
+    <div class="line"></div>
+    <div class="badge">Ciudad Dorada · San Salvador · 30 abr – 3 may</div>
+    <div class="line"></div>
+  </div>
+
+  <div class="grid-city">
+    <div class="photo img-main">
+      <img src="https://a0.muscache.com/im/pictures/ee271184-e0c4-4858-9980-13a4067e99e9.jpg?im_w=960" alt="Casa Ciudad Dorada">
+    </div>
+    <div class="photo img-2">
+      <img src="https://a0.muscache.com/im/pictures/miso/Hosting-963316219485086617/original/9f65a1e6-d49b-446b-9c60-07915ea3dcf5.jpeg?im_w=720" alt="">
+    </div>
+    <div class="photo img-3">
+      <img src="https://a0.muscache.com/im/pictures/miso/Hosting-963316219485086617/original/40460851-cb66-4853-b31c-cd8f178551fa.jpeg?im_w=720" alt="">
+    </div>
+    <div class="photo img-4">
+      <img src="https://a0.muscache.com/im/pictures/miso/Hosting-963316219485086617/original/553053fd-6718-44ea-8792-8cdc347b9a37.jpeg?im_w=720" alt="">
+    </div>
+    <div class="photo img-5">
+      <img src="https://a0.muscache.com/im/pictures/miso/Hosting-963316219485086617/original/7890d2e3-d842-4013-8b57-9f98b826215b.jpeg?im_w=720" alt="">
+    </div>
+  </div>
+
+  <div class="prop-info">
+    <div>
+      <div class="name">Casa con tecnología integrada</div>
+      <div class="sub">4 hab · 6 camas · Piscina · Vista Lago Ilopango · Alexa · 10 huéspedes</div>
+    </div>
+    <div style="text-align:right">
+      <div class="stars">★ 4.76 &nbsp;<span style="color:#888;font-size:0.75rem">(41 reseñas)</span></div>
+      <div class="dates">30 abr — 3 may · 3 noches</div>
+    </div>
+  </div>
+
+  <div class="footer">
+    El Salvador · Abril – Mayo 2026 · Un viaje para recordar 🌊<br>
+    <strong style="color:#f9d423; font-size:1.05rem; letter-spacing:1px;">Solo necesitas las ganas de ir y de tomar</strong>
+  </div>
+
+</div>
+</body>
+</html>
